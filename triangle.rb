@@ -21,14 +21,12 @@ def triangle(a, b, c)
   if (a <= 0 || b <= 0 || c <= 0)
     raise TriangleError, "."  
   end
-  
-  if (a == b && b == c) 
+  case
+  when (a == b && b == c) 
     return :equilateral
-  end
-  if (a == b || b == c || a == c) 
+  when (a == b || b == c || a == c) 
     return :isosceles
-  end
-  if (a != b && b != c && a != c) 
+  when (a != b && b != c && a != c) 
     return :scalene
   end
   # WRITE THIS CODE
